@@ -407,6 +407,7 @@ footer {
         display: flex;
         justify-content: flex-end; 
         align-items: center;
+        margin-top: auto;
     }
     .user-block header i {
         font-size: 14px;
