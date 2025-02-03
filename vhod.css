@@ -232,6 +232,9 @@ h2 {
     .login-container {
         width: 70%;
     }
+    .pass {
+        font-size: 20px;
+    }
 }
 
 
