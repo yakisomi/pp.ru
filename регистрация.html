@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="vhod.css">
+    <title>pp.ru</title>
+</head>
+<body>
+  <div class="login-container">
+    <img src="logo.png" class="logo" alt="Логотип">
+    <h2>Регистрация</h2>
+    <p class="info">Введите email адрес, придумайте имя пользователя и пароль.</p>
+
+    <form action="#" method="post" id="loginForm" onsubmit="return validateForm()">
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+          </div>
+          <div class="input-group">
+            <label for="name">Имя пользователя:</label>
+            <input type="name" id="name" name="name" placeholder="Введите имя пользователя" required>
+          </div>
+          <div class="input-group">
+            <label for="re_password">Пароль:</label>
+            <div style="position: relative">
+            <input type="password" id="re_password" name="re_password" placeholder="Введите ваш пароль" required>
+            <div class="password_toggle" onclick=" togglePasswordVisibility('re_password')" ></div>
+            </div>
+            <p id="error_message" class="error_message">Пароль должен содержать не менее 8 символов.</p>
+          </div>
+
+        <div class="remember_me">
+            <input type="checkbox" id="remember" name="remember" style="cursor: pointer;">
+            <label for="remember" style="margin-left: 5px;">Запомнить меня</label>
+        </div>
+
+        <button type="submit" class="button">Создать аккаунт</button>
+
+        <div class="registration-container">
+        <p>Уже есть аккаунт?<p><a href="вход.html" class="registration">Войти</a>
+        </div>
+    </form>
+</div>
+
+<script>
+  function togglePasswordVisibility(inputId) { 
+    const passwordInput = document.getElementById(inputId); 
+    const toggleIcon = passwordInput.nextElementSibling; 
+    if (passwordInput.type === 'password') { 
+        passwordInput.type = 'text'; 
+        toggleIcon.classList.add('active'); 
+    } else { 
+        passwordInput.type = 'password'; 
+        toggleIcon.classList.remove('active'); 
+    } 
+}
+
+  function validateForm() {
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('re_password');
+      const passwordError = document.getElementById('error_message');
+
+      if (!emailInput.value || !passwordInput.value) {
+           return false;
+      }
+
+      if (passwordInput.value.length < 8) {
+        passwordError.style.display = "block";
+          return false;
+      } 
+      else {
+          passwordError.style.display = "none";
+          
+      }
+
+      window.location.href = 'welcome.html';
+      return false; 
+  }
+</script>
+</body>
+</html>

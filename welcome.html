@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="welcome.css">
+    <title>pp.ru</title>
+</head>
+<body> 
+  <header>
+    <div class="overlay">
+      <div class="drop">
+        <button class="drop-menu">☰ Меню</button>
+        <div class="dropright-menu">
+          
+          <div class="menu-header">
+              <img class="logotip" src="whitelogo.png" alt="Логотип">
+          </div>
+      
+          <div class="menu-content">
+              <div class="menu-item">
+                  <img class="logotips" src="main.png" alt="Иконка">
+                  <a href="welcome.html" target="_self">Главная</a>
+              </div>
+              <div class="menu-item">
+                  <img class="logotips" src="anketa.png" alt="Иконка" style="border-radius: 40px">
+                  <a href="later.html" target="_self">Моя анкета</a>
+              </div>
+              <div class="menu-item">
+                  <img class="logotips" src="chat.png" alt="Иконка">
+                  <a href="later.html" target="_self">Мои чаты</a>
+              </div>
+              <div class="menu-item">
+                  <img class="logotips" src="favourites.png" alt="Иконка">
+                  <a href="later.html" target="_self">Избранное</a>
+              </div>
+          </div>
+      
+          <div class="menu-footer">
+              <div class="menu-item">
+                  <img class="logotips" src="help.png" alt="Иконка">
+                  <a class="help" href="later.html">Помощь</a>
+              </div>
+              <div class="menu-item">
+                <img class="logotips" src="exit.png" alt="Иконка">
+                <a class="help" href="index.html">Выход</a>
+            </div>
+          </div>
+      </div>      
+      </div>
+  </header>
+<div class="main-container">
+  <div class="search-container">
+    <h2>Анкеты</h2>
+    <input type="text" id="searchInput" placeholder="Поиск...">
+
+    
+    <h3>Фильтры:</h3>
+    <select id="specialtyFilter">
+        <option value="">Специальность</option>
+        <option value="Frontend-разработчик">Frontend-разработчик</option>
+        <option value="Backend-разработчик">Backend-разработчик</option>
+        <option value="Fullstack-разработчик">Fullstack-разработчик</option>
+        <option value="Тестировщик (QA)">Тестировщик (QA)</option>
+        <option value="Дизайнер">Дизайнер</option>
+    </select>
+    
+    <select id="languageFilter" style="margin-left: 10px">
+        <option value="">Язык программирования</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="C#">C#</option>
+        <option value="C++">C++</option>
+    </select>
+</div>
+
+<div class="container">
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Андрей</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Frontend-разработчик</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">JavaScript,Python,C#</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Алиса</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Дизайнер</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">JavaScript, Python</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Александр</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Тестировщик (QA)</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">Python, Java, JavaScript</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Людмила</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Frontend-разработчик</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">JavaScript, Python</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Степан</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Дизайнер</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">Python</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Андрей</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Backend-разработчик</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">C#, Java</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Виктор</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Тестировщик (QA)</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">Python, JavaScript</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Владислав</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Fullstack-разработчик</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">JavaScript, C#, C++, Python</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Юлия</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Backend-разработчик</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">C#, C++</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Евгений</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Тестировщик (QA)</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">Python, JavaScript</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Антон</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Frontend-разработчик</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">Python</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+
+  <div class="user-block">
+    <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя: Александр</i></header>
+    <section>
+      <h3><b>Специальность:</b></h3><h3 class="specialty">Fullstack-разработчик</h3>
+      <h3><b>Язык программирования:</b></h3><h3 class="language">JavaScript, C++, C#, Python</h3>
+      <h3><b>О себе:</b></h3><br>
+    </section>
+    <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+  </div>
+</div>
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#" class="active">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">&raquo;</a>
+</div>
+</div>
+<footer>
+  <h2>2025 год</h2>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Цифорки
+    const paginationLinks = document.querySelectorAll('.pagination a');
+    let activeIndex = 1;
+
+    function setActiveLink(index) {
+        paginationLinks.forEach((link, i) => {
+            link.classList.remove('active');
+            if (i === index && link.textContent !== '«' && link.textContent !== '»') {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    function animateBlocks() {
+        userBlocks.forEach(block => {
+            block.classList.add('fly-left');
+            setTimeout(() => {
+                block.classList.remove('fly-left');
+            }, 800);
+        });
+    }
+
+    setActiveLink(activeIndex);
+
+    paginationLinks.forEach((link, index) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            if (link.textContent === '«') {
+                activeIndex = (activeIndex - 1 + paginationLinks.length) % paginationLinks.length;
+                while (paginationLinks[activeIndex].textContent === '«' || paginationLinks[activeIndex].textContent === '»') {
+                    activeIndex = (activeIndex - 1 + paginationLinks.length) % paginationLinks.length;
+                }
+            } else if (link.textContent === '»') {
+                activeIndex = (activeIndex + 1) % paginationLinks.length;
+                while (paginationLinks[activeIndex].textContent === '«' || paginationLinks[activeIndex].textContent === '»') {
+                    activeIndex = (activeIndex + 1) % paginationLinks.length;
+                }
+            } else {
+                activeIndex = index;
+            }
+
+            setActiveLink(activeIndex);
+            animateBlocks();
+        });
+    });
+
+    // Выпадающее меню
+    const dropMenu = document.querySelector('.drop-menu');
+    const droprightMenu = document.querySelector('.dropright-menu');
+    const overlay = document.querySelector('.overlay');
+
+    dropMenu.addEventListener('click', function(event) {
+        event.stopPropagation();
+        droprightMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+
+        if (!droprightMenu.classList.contains('active')) {
+            overlay.classList.remove('active');
+        }
+    });
+
+ // Поиск
+ const searchInput = document.getElementById('searchInput');
+    const specialtyFilter = document.getElementById('specialtyFilter');
+    const languageFilter = document.getElementById('languageFilter');
+    const userBlocks = document.querySelectorAll('.user-block');
+
+    const specialtyMap = {
+        "frontend-разработчик": "frontend developer",
+        "backend-разработчик": "backend developer",
+        "fullstack-разработчик": "fullstack developer",
+        "тестировщик qa": "qa",
+        "дизайнер": "designer",
+    };
+
+    const languageMap = {
+        "javascript": "js",
+        "python": "python",
+        "java": "java",
+        "c#": "csharp",
+        "c++": "cpp",
+    };
+
+    function normalizeText(text) {
+        return text
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, ' ')
+            .replace(/[ёЁ]/g, 'е');
+    }
+
+    function filterProfiles() {
+        const searchText = normalizeText(searchInput.value);
+        let selectedSpecialty = normalizeText(specialtyFilter.value);
+        let selectedLanguage = normalizeText(languageFilter.value);
+
+        selectedSpecialty = specialtyMap[selectedSpecialty] || selectedSpecialty;
+        selectedLanguage = languageMap[selectedLanguage] || selectedLanguage;
+
+        userBlocks.forEach(block => {
+          let name = normalizeText(block.querySelector('header i')?.textContent || "");
+            let specialty = normalizeText(block.querySelector('.specialty')?.textContent || "");
+           let languageText = normalizeText(block.querySelector('.language')?.textContent || "");
+           let languages = languageText.split(',').map(lang => lang.trim());
+
+
+            specialty = specialtyMap[specialty] || specialty;
+             languages = languages.map(language => languageMap[language] || language);
+
+            const matchesSpecialty = selectedSpecialty === "" || specialty === selectedSpecialty;
+              
+             const matchesLanguage = selectedLanguage === "" || languages.some(lang => lang.includes(selectedLanguage));
+
+
+            const matchesSearch = searchText === "" ||
+                new RegExp(`^${searchText}$`, 'i').test(name) ||
+               specialty.includes(searchText) || languages.some(lang => lang.includes(searchText))
+
+            block.style.display = (matchesSearch && matchesSpecialty && matchesLanguage) ? 'block' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterProfiles);
+    specialtyFilter.addEventListener('change', filterProfiles);
+    languageFilter.addEventListener('change', filterProfiles);
+    
+}); 
+</script>
+</body>
+</html>

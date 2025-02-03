@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>pp.ru</title>
+</head>
+<body>
+<header>
+  <a href="вход.html" class="login-icon" target="_self">
+    <h1>Войти</h1>
+    <img src="login_icon.png" alt="Войти">
+  </a>
+  <img src="logo.png" class="logo" alt="Логотип">
+</header> 
+<div class="main-container">
+  <div class="text-container">
+      <h2>Добро пожаловать на pp.ru — платформа</h2>
+      <h2>для начинающих IT-специалистов: Найдите своих</h2>
+      <h2>идеальных партнеров по работе!</h2>
+  </div>
+  <div class="container">
+    <div class="user-block">
+      <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя:</i></header>
+      <section>
+        <h3>Специальность:</h3>
+        <h3>Язык программирования:</h3>
+        <h3 style="margin-bottom: 20px;">О себе:</h3><br>
+      </section>
+      <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+    </div>
+
+    <div class="user-block">
+      <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя:</i></header>
+      <section>
+        <h3>Специальность:</h3>
+        <h3>Язык программирования:</h3>
+        <h3 style="margin-bottom: 20px;">О себе:</h3><br>
+      </section>
+      <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+    </div>
+
+    <div class="user-block">
+      <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя:</i></header>
+      <section>
+        <h3>Специальность:</h3>
+        <h3>Язык программирования:</h3>
+        <h3 style="margin-bottom: 20px;">О себе:</h3><br>
+      </section>
+      <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+    </div>
+
+    <div class="user-block">
+      <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя:</i></header>
+      <section>
+        <h3>Специальность:</h3>
+        <h3>Язык программирования:</h3>
+        <h3 style="margin-bottom: 20px;">О себе:</h3><br>
+      </section>
+      <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+    </div>
+
+    <div class="user-block">
+      <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя:</i></header>
+      <section>
+        <h3>Специальность:</h3>
+        <h3>Язык программирования:</h3>
+        <h3 style="margin-bottom: 20px;">О себе:</h3><br>
+      </section>
+      <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+    </div>
+    <div class="user-block">
+      <header><img src="user_icon.png" class="user_icon" alt="Иконка"><i>Имя пользователя:</i></header>
+      <section>
+        <h3>Специальность:</h3>
+        <h3>Язык программирования:</h3>
+        <h3 style="margin-bottom: 20px;">О себе:</h3><br>
+      </section>
+      <footer><img src="icons.png" class="icons" alt="Иконки"></footer>
+    </div>
+  </div>
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">&raquo;</a>
+  </div>
+</div>
+  <div id="notification" class="hidden">
+    <div id="popupOverlay" class="overlay-container">
+      <div class="notification">
+        <span id="close_notification" class="close_notification">&times;</span>
+        <p>Вы не вошли в систему!</p>
+        <button id="login_notification" class="login_notification">Войти</button>        
+      </div>
+    </div>
+  </div>
+<script>
+function togglePopup() {
+  const overlay = document.getElementById('popupOverlay');
+  overlay.classList.toggle('show');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const block = document.querySelectorAll('.user-block');
+    const notification = document.getElementById('notification');
+    const loginButton = document.getElementById('login_notification');
+    const closeButton = document.getElementById('close_notification');
+    const overlay = document.getElementById('popupOverlay');
+    
+    block.forEach(block => {
+      block.addEventListener('click', function(event) {
+        event.preventDefault();
+        overlay.classList.add('show');
+      });
+    });
+
+    loginButton.addEventListener('click', function() {
+      window.location.href = "вход.html";
+    });
+
+    closeButton.addEventListener('click', function() {
+      overlay.classList.remove('show');
+    });
+});
+</script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const userBlocks = document.querySelectorAll('.user-block');
+    const paginationLinks = document.querySelectorAll('.pagination a');
+    let activeIndex = 1; 
+
+    // Функция для переключения активной страницы
+    function setActiveLink(index) {
+        paginationLinks.forEach((link, i) => {
+            link.classList.remove('active');
+            if (i === index && link.textContent !== '«' && link.textContent !== '»') {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Функция для запуска анимации
+    function animateBlocks() {
+        userBlocks.forEach(block => {
+            block.classList.add('fly-left');
+            setTimeout(() => {
+                block.classList.remove('fly-left');
+            }, 800);
+        });
+    }
+
+    // Первоначальная установка активного элемента
+    setActiveLink(activeIndex);
+
+    // Обработка кликов на все ссылки
+    paginationLinks.forEach((link, index) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+
+            if (link.textContent === '«') {
+                activeIndex = (activeIndex - 1 + paginationLinks.length) % paginationLinks.length;
+                
+                while (paginationLinks[activeIndex].textContent === '«' || paginationLinks[activeIndex].textContent === '»') {
+                    activeIndex = (activeIndex - 1 + paginationLinks.length) % paginationLinks.length;
+                }
+            } else if (link.textContent === '»') {
+                activeIndex = (activeIndex + 1) % paginationLinks.length;
+
+                while (paginationLinks[activeIndex].textContent === '«' || paginationLinks[activeIndex].textContent === '»') {
+                    activeIndex = (activeIndex + 1) % paginationLinks.length;
+                }
+            } else {
+                activeIndex = index;
+            }
+
+            setActiveLink(activeIndex);
+            animateBlocks();
+        });
+    });
+});
+</script>
+</body>
+</html>

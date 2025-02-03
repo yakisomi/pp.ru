@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="later.css">
+    <title>pp.ru</title>
+</head>
+<body> 
+    <header>
+        <div class="overlay">
+          <div class="drop">
+            <button class="drop-menu">☰ Меню</button>
+            <div class="dropright-menu">
+              
+              <div class="menu-header">
+                  <img class="logotip" src="whitelogo.png" alt="Логотип">
+              </div>
+          
+              <div class="menu-content">
+                  <div class="menu-item">
+                      <img class="logotips" src="main.png" alt="Иконка">
+                      <a href="welcome.html" target="_self">Главная</a>
+                  </div>
+                  <div class="menu-item">
+                      <img class="logotips" src="anketa.png" alt="Иконка" style="border-radius: 40px">
+                      <a href="later.html" target="_self">Моя анкета</a>
+                  </div>
+                  <div class="menu-item">
+                      <img class="logotips" src="chat.png" alt="Иконка">
+                      <a href="later.html" target="_self">Мои чаты</a>
+                  </div>
+                  <div class="menu-item">
+                      <img class="logotips" src="favourites.png" alt="Иконка">
+                      <a href="later.html" target="_self">Избранное</a>
+                  </div>
+              </div>
+          
+              <div class="menu-footer">
+                  <div class="menu-item">
+                      <img class="logotips" src="help.png" alt="Иконка">
+                      <a class="help" href="later.html">Помощь</a>
+                  </div>
+                  <div class="menu-item">
+                    <img class="logotips" src="exit.png" alt="Иконка">
+                    <a class="help" href="index.html">Выход</a>
+                </div>
+              </div>
+          </div>      
+          </div>
+      </header>
+  <div class="container">
+    <h1>Страница почти готова, следите за обновлениями!</h1>
+    <img src="anime.gif">
+</div>
+<footer>
+    <h2>2025 год</h2>
+</footer>
+<script>
+  const dropMenu = document.querySelector('.drop-menu');
+    const droprightMenu = document.querySelector('.dropright-menu');
+    const overlay = document.querySelector('.overlay');
+
+    dropMenu.addEventListener('click', function(event) {
+        event.stopPropagation();
+        droprightMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+
+        if (!droprightMenu.classList.contains('active')) {
+            overlay.classList.remove('active');
+        }
+    });
+
+    overlay.addEventListener('click', function() {
+        droprightMenu.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="vhod.css">
+    <title>pp.ru</title>
+</head>
+<body>
+  <div class="login-container">
+    <img src="logo.png" class="logo" alt="Логотип">
+    <h2>Новый пароль</h2>
+    <p class="info">Придумайте новый пароль длиной не менее 8 символов. Он не должен совпадать с вашим текущим паролем.</p>
+
+    <form action="#" method="post" id="loginForm" onsubmit="return validatePasswords()">
+          <div class="input-group">
+            <label for="password">Придумайте новый пароль:</label>
+            <div style="position: relative">
+            <input type="password" id="password" name="password" placeholder="Введите новый пароль" required>
+            <div class="password_toggle" onclick=" togglePasswordVisibility('password')"></div>
+            </div>
+             <p id="error_message_password" class="error_message" style="display: none"></p>
+          </div>
+          <div class="input-group">
+            <label for="new_password">Подтвердите пароль:</label>
+            <div style="position: relative">
+            <input type="password" id="new_password" name="new_password" placeholder="Повторите новый пароль" required>
+            <div class="password_toggle" onclick=" togglePasswordVisibility('new_password')"></div>
+            </div>
+             <p id="error_message_new_password" class="error_message" style="display: none"></p>
+          </div>
+           <p id="password-error" class="error_message" style="display: none;">Пароль и подтверждение пароля не совпадают.</p>
+
+        <button type="submit" class="button">Сбросить пароль</button>
+
+        <div class="registration-container">
+          <a href="вход.html" class="registration" style="margin-top: 10px">Вернуться ко входу</a>
+        </div>
+    </form>
+</div>
+
+<div id="popupOverlay" class="overlay-container">
+  <div id="success-message" class="success-message">
+      <p class="pass" style="color: green;">Пароль успешно сброшен!</p>
+      <p>Перейдите на страницу входа и войдите с новым паролем.</p>
+       <button id="vhod_notification" class="login_notification">Вернуться ко входу</button>
+  </div>
+</div>
+
+<script>
+  function togglePasswordVisibility(inputId) {
+    const passwordInput = document.getElementById(inputId);
+    const toggleIcon = passwordInput.nextElementSibling;
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      toggleIcon.classList.add('active');
+    } else {
+      passwordInput.type = 'password';
+      toggleIcon.classList.remove('active');
+    }
+  }
+
+
+  function validateForm(passwordInput, passwordError) {
+    if (passwordInput.value.length < 8) {
+      passwordError.textContent = "Пароль должен быть не менее 8 символов.";
+      passwordError.style.display = "block";
+      return false;
+    } else {
+      passwordError.style.display = "none";
+    }
+    return true;
+  }
+
+
+  function validatePasswords() {
+    const passwordInput = document.getElementById('password');
+    const newPasswordInput = document.getElementById('new_password');
+    const passwordMatchError = document.getElementById('password-error');
+    const passwordError = document.getElementById('error_message_password');
+    const newPasswordError = document.getElementById('error_message_new_password');
+    const popupOverlay = document.getElementById('popupOverlay');
+
+    let isPasswordValid = validateForm(passwordInput, passwordError);
+
+    if (!isPasswordValid) {
+      return false;
+    }
+
+    let isNewPasswordValid = validateForm(newPasswordInput,newPasswordError)
+
+    if(!isNewPasswordValid) {
+      return false;
+    }
+
+    if (passwordInput.value !== newPasswordInput.value) {
+      passwordMatchError.style.display = "block";
+      return false;
+    }
+
+    passwordMatchError.style.display = "none";
+    popupOverlay.classList.add('show');
+    return false;
+  }
+  document.getElementById('vhod_notification').addEventListener('click', function() {
+    window.location.href = 'вход.html';
+  });
+</script>
+</body>
+</html>
