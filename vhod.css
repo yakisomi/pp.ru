@@ -151,8 +151,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 300px; 
-    width: auto;
+    width: 300px; 
     min-height: 50px;
     height: auto;
     display: flex; 
@@ -174,6 +173,7 @@ h2 {
 
 .login_notification {
     position: relative; 
+    padding: 5px;
     font-size: 18px;
     color: rgb(0, 0, 0);
     background-color: rgba(228, 226, 226, 0.699);
@@ -235,6 +235,7 @@ h2 {
     .pass {
         font-size: 20px;
     }
+
 }
 
 
